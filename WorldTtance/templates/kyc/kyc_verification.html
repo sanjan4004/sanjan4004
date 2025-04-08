@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}KYC Verification{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center">KYC Verification</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="id_type" class="form-label">ID Type</label>
+                        {{ form.id_type }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_number" class="form-label">ID Number</label>
+                        {{ form.id_number }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_image" class="form-label">Upload ID Image</label>
+                        {{ form.id_image }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="selfie_image" class="form-label">Upload Selfie</label>
+                        {{ form.selfie_image }}
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit for Verification</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

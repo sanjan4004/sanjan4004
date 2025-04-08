@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}Recipient Form{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center">{% if form.instance.pk %}Edit{% else %}Add New{% endif %} Recipient</h2>
+                <hr>
+                <form method="post" id="recipient-form">
+                    {% csrf_token %}
+
+                    {% if form.errors %}
+                        <div class="alert alert-danger">
+                            <strong>Please fix the following errors:</strong>
+                            <ul>
+                                {% for field, errors in form.errors.items %}
+                                    <li>{{ field|title }}: {{ errors|striptags }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        {{ form.full_name }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Country</label>
+                        {{ form.country }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Currency</label>
+                        {{ form.currency }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        {{ form.payment_method }}
+                    </div>
+
+                    <!-- Mobile Wallet (M-Pesa) -->
+                    <div class="mb-3 d-none" id="phone_number_field">
+                        <label class="form-label">Phone Number (Required for M-Pesa)</label>
+                        {{ form.phone_number }}
+                    </div>
+
+                    <!-- Bank Transfer -->
+                    <div class="mb-3 d-none" id="bank_account_field">
+                        <label class="form-label">Bank Account Number</label>
+                        {{ form.bank_account_number }}
+                    </div>
+
+                    <!-- Card Payment Fields (Visa, MasterCard, Amex) -->
+                    <div class="d-none" id="card_payment_fields">
+                        <div class="mb-3">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" name="card_number" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Expiry Date</label>
+                            <input type="text" name="expiry_date" class="form-control" placeholder="MM/YY">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">CVV</label>
+                            <input type="text" name="cvv" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Token Field (Google Pay, Apple Pay) -->
+                    <div class="mb-3 d-none" id="token_field">
+                        <label class="form-label">Payment Token</label>
+                        <input type="text" name="token" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        {% if form.instance.pk %}Save Changes{% else %}Save Recipient{% endif %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/payments.js' %}"></script>
+
+<!-- JavaScript to dynamically show required fields -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const paymentMethod = document.querySelector("[name='payment_method']");
+        const phoneNumberField = document.getElementById("phone_number_field");
+        const cardFields = document.getElementById("card_payment_fields");
+        const tokenField = document.getElementById("token_field");
+        const bankAccountField = document.getElementById("bank_account_field");
+
+        function toggleFields() {
+            const method = paymentMethod.value;
+
+            phoneNumberField.classList.add("d-none");
+            cardFields.classList.add("d-none");
+            tokenField.classList.add("d-none");
+            bankAccountField.classList.add("d-none");
+
+            if (method === "M-Pesa") {
+                phoneNumberField.classList.remove("d-none");
+            } else if (["Visa", "MasterCard", "Amex"].includes(method)) {
+                cardFields.classList.remove("d-none");
+            } else if (["Google Pay", "Apple Pay"].includes(method)) {
+                tokenField.classList.remove("d-none");
+            } else if (method === "Bank Transfer") {
+                bankAccountField.classList.remove("d-none");
+            }
+        }
+
+        toggleFields();
+        paymentMethod.addEventListener("change", toggleFields);
+    });
+</script>
+
+{% endblock %}

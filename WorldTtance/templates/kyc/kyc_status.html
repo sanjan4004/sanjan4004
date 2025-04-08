@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}KYC Status{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center">KYC Verification Status</h2>
+                <hr>
+                <div class="text-center my-3">
+                    {% if kyc.status == "Approved" %}
+                        <h4 class="text-success">✔ Approved</h4>
+                        <p class="text-muted">Your KYC verification has been successfully approved.</p>
+                        <i class="fas fa-check-circle text-success fa-4x"></i>
+                    {% elif kyc.status == "Pending" %}
+                        <h4 class="text-warning">⏳ Pending</h4>
+                        <p class="text-muted">Your KYC verification is under review. Please check back later.</p>
+                        <i class="fas fa-hourglass-half text-warning fa-4x"></i>
+                    {% else %}
+                        <h4 class="text-danger">❌ Rejected</h4>
+                        <p class="text-muted">Your KYC verification was rejected. Please resubmit your details.</p>
+                        <i class="fas fa-times-circle text-danger fa-4x"></i>
+                    {% endif %}
+                </div>
+                
+                <div class="border p-3 rounded">
+                    <h5>Verification Details</h5>
+                    <p><strong>ID Type:</strong> {{ kyc.id_type }}</p>
+                    <p><strong>ID Number:</strong> {{ kyc.id_number }}</p>
+                    <p><strong>Submitted On:</strong> {{ kyc.submitted_at }}</p>
+                    <p><strong>Status:</strong> <span class="badge {% if kyc.status == 'Approved' %}bg-success{% elif kyc.status == 'Pending' %}bg-warning{% else %}bg-danger{% endif %}">{{ kyc.status }}</span></p>
+                </div>
+
+                {% if kyc.status == "Rejected" %}
+                    <div class="text-center mt-4">
+                        <a href="{% url 'kyc_verification' %}" class="btn btn-primary">Resubmit KYC</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

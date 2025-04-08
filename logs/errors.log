@@ -1,0 +1,2173 @@
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 362, in binance_payment_view
+    payment_response = create_binance_payment(amount, currency, customer_id, return_url)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 167, in create_binance_payment
+    headers = generate_signature("post", url, body)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\rapyd_config.py", line 29, in generate_signature
+    if response.status_code == 429:
+       ^^^^^^^^
+NameError: name 'response' is not defined
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 82010
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 361, in binance_payment_view
+    response = create_binance_payment(amount, currency, merchant_trade_no)
+TypeError: create_binance_payment() missing 1 required positional argument: 'return_url'
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 71361
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 361, in binance_payment_view
+    response = create_binance_payment(amount, currency, merchant_trade_no,return_url)
+                                                                          ^^^^^^^^^^
+NameError: name 'return_url' is not defined
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 71223
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 277, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 150, in transfer_fees_to_admin
+    if not admin_wallet:
+           ^^^^^^^^^^^^
+NameError: name 'admin_wallet' is not defined. Did you mean: 'AdminWallet'?
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 80735
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 279, in new_transaction
+    transfer_fees_to_mpesa(transaction)
+    ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'transfer_fees_to_mpesa' is not defined. Did you mean: 'transfer_fees_to_admin'?
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 76788
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 371, in binance_payment_view
+    return render(request, "binance_pay.html")
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: binance_pay.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 86327
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 367, in binance_payment_view
+    response = create_binance_payment(amount, currency, merchant_trade_no, return_url)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 175, in create_binance_payment
+    signature = generate_signature(payload)
+TypeError: generate_signature() missing 1 required positional argument: 'url_path'
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 77411
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 370, in binance_payment_view
+    response = create_binance_payment(amount, currency, merchant_trade_no, return_url)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 177, in create_binance_payment
+    signature = generate_signature(payload, url_path)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\rapyd_config.py", line 19, in generate_signature
+    to_sign = http_method + url_path + body_string + timestamp + RAPYD_ACCESS_KEY + RAPYD_SECRET_KEY
+              ~~~~~~~~~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'dict' and 'str'
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 83225
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 83314
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 83314
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 82908
+"POST /WorldTtance/binance-pay/ HTTP/1.1" 500 83137
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 287, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '{{ form.country' from '{{ form.country'
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 222240
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 277, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 155, in transfer_fees_to_admin
+    if not admin_wallet:
+           ^^^^^^^^^^^^
+NameError: name 'admin_wallet' is not defined. Did you mean: 'AdminWallet'?
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 81224
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 277, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 155, in transfer_fees_to_admin
+    if not admin_wallet:
+           ^^^^^^^^^^^^
+NameError: name 'admin_wallet' is not defined. Did you mean: 'AdminWallet'?
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 81222
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 462, in new_transaction
+    return render(request, "transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: transaction_form.html
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 89259
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 444, in new_transaction
+    transaction.transaction_fee = transaction.amount * 0.02
+                                  ~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 72741
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 444, in new_transaction
+    transaction.transaction_fee = transaction.amount * 0.02
+                                  ~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77555
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 444, in new_transaction
+    transaction.transaction_fee = transaction.amount * 0.02
+                                  ~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77552
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 455, in new_transaction
+    return redirect("transaction_success")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'transaction_success' not found. 'transaction_success' is not a valid view function or pattern name.
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 96314
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 457, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1073, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1050, in render_value_in_context
+    value = str(value)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\boundfield.py", line 108, in as_widget
+    return widget.render(
+           ~~~~~~~~~~~~~^
+        name=self.html_initial_name if only_initial else self.html_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        renderer=self.form.renderer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 278, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 764, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 715, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+                                     ~~~~~~~~~~~~~~^
+        name, context["widget"]["value"], attrs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 655, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+                                               ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1425, in __iter__
+    yield self.choice(obj)
+          ~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1439, in choice
+    self.field.label_from_instance(obj),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1529, in label_from_instance
+    return str(obj)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\models.py", line 51, in __str__
+    return f"{self.admin.username}'s Wallet"
+              ^^^^^^^^^^
+AttributeError: 'Recipient' object has no attribute 'admin'
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 199546
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 457, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1073, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1050, in render_value_in_context
+    value = str(value)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\boundfield.py", line 108, in as_widget
+    return widget.render(
+           ~~~~~~~~~~~~~^
+        name=self.html_initial_name if only_initial else self.html_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        renderer=self.form.renderer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 278, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 764, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 715, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+                                     ~~~~~~~~~~~~~~^
+        name, context["widget"]["value"], attrs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 655, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+                                               ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1425, in __iter__
+    yield self.choice(obj)
+          ~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1439, in choice
+    self.field.label_from_instance(obj),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1529, in label_from_instance
+    return str(obj)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\models.py", line 51, in __str__
+    return f"{self.admin.username}'s Wallet"
+              ^^^^^^^^^^
+AttributeError: 'Recipient' object has no attribute 'admin'
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 199683
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 457, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1073, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1050, in render_value_in_context
+    value = str(value)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\utils.py", line 79, in __str__
+    return self.as_widget()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\boundfield.py", line 108, in as_widget
+    return widget.render(
+           ~~~~~~~~~~~~~^
+        name=self.html_initial_name if only_initial else self.html_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        renderer=self.form.renderer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 278, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 764, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 715, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+                                     ~~~~~~~~~~~~~~^
+        name, context["widget"]["value"], attrs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\widgets.py", line 655, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+                                               ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1425, in __iter__
+    yield self.choice(obj)
+          ~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1439, in choice
+    self.field.label_from_instance(obj),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\forms\models.py", line 1529, in label_from_instance
+    return str(obj)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\models.py", line 51, in __str__
+    return f"{self.admin.username}'s Wallet"
+              ^^^^^^^^^^
+AttributeError: 'Recipient' object has no attribute 'admin'
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 199683
+Internal Server Error: /WorldTtance/checkout/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 314, in checkout
+    response = create_crypto_payment(payment_method, amount, currency)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\rapyd.py", line 65, in create_crypto_payment
+    response = requests.post(url, headers=headers, data=body)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+"POST /WorldTtance/checkout/ HTTP/1.1" 500 265018
+Internal Server Error: /WorldTtance/checkout/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 530, in checkout
+    return render(request, "rapyd/checkout.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rapyd/checkout.html
+"GET /WorldTtance/checkout/ HTTP/1.1" 500 92292
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "rapyd/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rapyd/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92422
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance_payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/binance_payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92500
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ~~~~~~~^
+        type(current), bit
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+AttributeError: type object 'RequestContext' has no attribute 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/binance.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 739, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [transaction] in [{'True': True, 'False': False, 'None': None}, {}, {}]
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 181804
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments/payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments/payment.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 92292
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ~~~~~~~^
+        type(current), bit
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+AttributeError: type object 'RequestContext' has no attribute 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'transaction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payment.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 739, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [transaction] in [{'True': True, 'False': False, 'None': None}, {}, {}]
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 185236
+Internal Server Error: /WorldTtance/binance-pay/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 547, in binance_payment_view
+    return render(request, "payments.html")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payments.html
+"GET /WorldTtance/binance-pay/ HTTP/1.1" 500 91916
+Internal Server Error: /WorldTtance/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 262, in dashboard
+    return render(request, 'dashboard.html', context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_profile' not found. 'user_profile' is not a valid view function or pattern name.
+"GET /WorldTtance/dashboard/ HTTP/1.1" 500 169836
+Internal Server Error: /WorldTtance/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 262, in dashboard
+    return render(request, 'dashboard.html', context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_profile' not found. 'user_profile' is not a valid view function or pattern name.
+"GET /WorldTtance/dashboard/ HTTP/1.1" 500 171124
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 670, in new_transaction
+    return render(request, "transactions/new_transaction.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: transactions/new_transaction.html
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 87272
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 670, in new_transaction
+    return render(request, "transactions/new_transaction.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: transactions/new_transaction.html
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 87272
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 642, in new_transaction
+    transaction.transaction_fee = transaction.amount * 0.02
+                                  ~~~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 72410
+Internal Server Error: /WorldTtance/profile/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 197, in profile_view
+    return render(request, "users/user_profile.html", {"profile": profile})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\fields\files.py", line 69, in url
+    self._require_file()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\fields\files.py", line 44, in _require_file
+    raise ValueError(
+        "The '%s' attribute has no file associated with it." % self.field.name
+    )
+ValueError: The 'profile_picture' attribute has no file associated with it.
+"GET /WorldTtance/profile/ HTTP/1.1" 500 172935
+Internal Server Error: /WorldTtance/profile/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 197, in profile_view
+    return render(request, "users/user_profile.html", {"profile": profile})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\fields\files.py", line 69, in url
+    self._require_file()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\fields\files.py", line 44, in _require_file
+    raise ValueError(
+        "The '%s' attribute has no file associated with it." % self.field.name
+    )
+ValueError: The 'profile_picture' attribute has no file associated with it.
+"GET /WorldTtance/profile/ HTTP/1.1" 500 172956
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 82987
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 82989
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 83000
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 82988
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 83004
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 345, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\utils.py", line 65, in transfer_fees_to_admin
+    logger.error(f"Binance transfer failed on attempt {attempt + 1}: {result}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 83002
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 149, in new_transaction
+    response = process_payment(
+        transaction.payment_method, transaction.amount, transaction.currency, recipient_details
+    )
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                          ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'user'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 81564
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 122, in new_transaction
+    response = process_payment(
+        transaction.payment_method, transaction.amount, transaction.currency, recipient_details
+    )
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 51, in process_payment
+    logger.debug(f"Processing {payment_method} payment for {amount} {currency}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 79785
+Internal Server Error: /WorldTtance/crypto-payment/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\requests\models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 305, in crypto_payment_view
+    response = create_crypto_payment(float(amount), currency, recipient_wallet)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\bybit.py", line 34, in create_crypto_payment
+    return response.json()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\requests\models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+"POST /WorldTtance/crypto-payment/ HTTP/1.1" 500 95849
+Internal Server Error: /WorldTtance/crypto-payment/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\requests\models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 305, in crypto_payment_view
+    response = create_crypto_payment(float(amount), currency, recipient_wallet)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\bybit.py", line 34, in create_crypto_payment
+    return response.json()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\requests\models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+"POST /WorldTtance/crypto-payment/ HTTP/1.1" 500 95849
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 122, in new_transaction
+    response = process_binance_payment(
+        transaction.payment_method, transaction.amount, transaction.currency, recipient_details
+    )
+TypeError: process_binance_payment() takes 1 positional argument but 4 were given
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 76833
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 122, in new_transaction
+    response = process_payment(
+        transaction.payment_method, transaction.amount, transaction.currency, recipient_details
+    )
+  File "C:\Users\SanJan4004.DALTON\desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\payment_gateways.py", line 106, in process_payment
+    logger.debug(f"Processing {payment_method} payment for {amount} {currency}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 80190
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 590, in new_transaction
+    transfer_transaction_fee(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: transfer_transaction_fee() missing 1 required positional argument: 'sender_wallet'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77986
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 588, in new_transaction
+    process_transaction(transaction)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 305, in process_transaction
+    transfer_response = transfer_transaction_fee(transaction_fee, transaction.sender_wallet)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Transaction' object has no attribute 'sender_wallet'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 87162
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 588, in new_transaction
+    process_payment(transaction)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: process_payment() missing 3 required positional arguments: 'amount', 'currency', and 'recipient_details'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 78096
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 588, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'transfer_fees_to_admin' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77778
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 587, in new_transaction
+    transfer_fees_to_binance(transaction)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: transfer_fees_to_binance() missing 1 required positional argument: 'currency'
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77394
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 587, in new_transaction
+    transfer_fees_to_binance(transaction,currency)
+                                         ^^^^^^^^
+NameError: name 'currency' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77240
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 592, in new_transaction
+    transfer_fees_to_admin(transaction)
+    ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'transfer_fees_to_admin' is not defined
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 77805
+Internal Server Error: /payments/mpesa/token/
+"GET /payments/mpesa/token/ HTTP/1.1" 500 44
+Internal Server Error: /payments/mpesa/b2b/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "payments_b2btransaction" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "payments_b2btransaction"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\payments\views.py", line 109, in b2b_transaction_dashboard
+    page_obj = paginator.get_page(page_number)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\paginator.py", line 85, in get_page
+    return self.page(number)
+           ~~~~~~~~~^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "payments_b2btransaction" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "payments_b2btransaction"
+                                          ^
+
+"GET /payments/mpesa/b2b/dashboard/ HTTP/1.1" 500 155131
+Internal Server Error: /payments/mpesa/b2b/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: WorldTtance/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\payments\views.py", line 111, in b2b_transaction_dashboard
+    return render(request, "payments/b2b_dashboard.html", {"transactions": page_obj})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: WorldTtance/base.html
+"GET /payments/mpesa/b2b/dashboard/ HTTP/1.1" 500 137497
+Internal Server Error: /WorldTtance/register/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 228, in register
+    first_name = request.POST["first_name"]
+                 ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'first_name'
+"POST /WorldTtance/register/ HTTP/1.1" 500 80369
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 137, in new_transaction
+    return redirect("transaction_form")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'transaction_form' not found. 'transaction_form' is not a valid view function or pattern name.
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 97792
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'WorldTtance'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 137, in new_transaction
+    return redirect("WorldTtance:transaction_form")  # If using an app namespace
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'WorldTtance' is not a registered namespace
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 100360
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 168, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'new_transaction' not found. 'new_transaction' is not a valid view function or pattern name.
+"GET /WorldTtance/transactions/new/ HTTP/1.1" 500 162353
+Internal Server Error: /WorldTtance/transactions/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 137, in new_transaction
+    return redirect("transaction_form")
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'transaction_form' not found. 'transaction_form' is not a valid view function or pattern name.
+"POST /WorldTtance/transactions/new/ HTTP/1.1" 500 98107
+Internal Server Error: /WorldTtance/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 176, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'initiate_payment' not found. 'initiate_payment' is not a valid view function or pattern name.
+"GET /WorldTtance/new/ HTTP/1.1" 500 162424
+Internal Server Error: /WorldTtance/new/
+Traceback (most recent call last):
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\sanremit\src\sanjan4004\sanjan4004\WorldTtance\views.py", line 176, in new_transaction
+    return render(request, "transactions/transaction_form.html", {"form": form})
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SanJan4004.DALTON\Desktop\salim\salim\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'initiate_payment' not found. 'initiate_payment' is not a valid view function or pattern name.
+"GET /WorldTtance/new/ HTTP/1.1" 500 162424

@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}New Transaction{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center mb-4">Create New Transaction</h2>
+
+                <!-- Transaction Form -->
+                <form id="transaction-form" method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+
+                    <!-- Recipient -->
+                    <div class="mb-3">
+                        <label for="{{ form.recipient.id_for_label }}" class="form-label">Select Recipient</label>
+                        {{ form.recipient }}
+                        {{ form.recipient.errors }}
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="mb-3">
+                        <label for="{{ form.amount.id_for_label }}" class="form-label">Amount</label>
+                        {{ form.amount }}
+                        {{ form.amount.errors }}
+                    </div>
+
+                    <!-- Currency -->
+                    <div class="mb-3">
+                        <label for="{{ form.currency.id_for_label }}" class="form-label">Select Currency</label>
+                        {{ form.currency }}
+                        {{ form.currency.errors }}
+                    </div>
+
+                    <!-- Country -->
+                    <div class="mb-3">
+                        <label for="{{ form.country.id_for_label }}" class="form-label">Select Country</label>
+                        {{ form.country }}
+                        {{ form.country.errors }}
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="mb-3">
+                        <label for="{{ form.payment_method.id_for_label }}" class="form-label">Payment Method</label>
+                        {{ form.payment_method }}
+                        {{ form.payment_method.errors }}
+                    </div>
+
+                    <!-- Cryptocurrency Selection -->
+                    <div id="crypto_type_field" class="mb-3 d-none">
+                        <label for="{{ form.crypto_type.id_for_label }}" class="form-label">Select Cryptocurrency</label>
+                        {{ form.crypto_type }}
+                        {{ form.crypto_type.errors }}
+                    </div>
+
+                    <!-- Crypto Wallet -->
+                    <div id="crypto_fields" class="mb-3 d-none">
+                        <label for="{{ form.crypto_address.id_for_label }}" class="form-label">Crypto Wallet Address</label>
+                        {{ form.crypto_address }}
+                        {{ form.crypto_address.errors }}
+                    </div>
+
+                    <!-- M-Pesa -->
+                    <div id="mpesa_fields" class="mb-3 d-none">
+                        <label for="{{ form.mpesa_phone_number.id_for_label }}" class="form-label">M-Pesa Phone Number</label>
+                        {{ form.mpesa_phone_number }}
+                        {{ form.mpesa_phone_number.errors }}
+                    </div>
+
+                    <!-- Card Payment -->
+                    <div id="cardPaymentFields" class="mb-3 d-none">
+                        <label for="{{ form.card_number.id_for_label }}" class="form-label">Card Number</label>
+                        <div class="input-group">
+                            {{ form.card_number }}
+                            <span class="input-group-text">
+                                <img id="card-logo" src="" alt="Card Type" style="height: 25px; display: none;">
+                            </span>
+                        </div>
+                        <label for="{{ form.expiry_date.id_for_label }}" class="form-label mt-2">Expiry Date (MM/YY)</label>
+                        {{ form.expiry_date }}
+                        {{ form.expiry_date.errors }}
+
+                        <label for="{{ form.cvv.id_for_label }}" class="form-label mt-2">CVV</label>
+                        {{ form.cvv }}
+                        {{ form.cvv.errors }}
+                    </div>
+
+                    <!-- Google Pay / Apple Pay -->
+                    <div id="google_apple_fields" class="mb-3 d-none">
+                        <label for="{{ form.payment_token.id_for_label }}" class="form-label">Payment Token</label>
+                        {{ form.payment_token }}
+                        {{ form.payment_token.errors }}
+                    </div>
+
+                    <!-- Bank Transfer -->
+                    <div id="bank_transfer_fields" class="mb-3 d-none">
+                        <label for="{{ form.account_number.id_for_label }}" class="form-label">Bank Account Number</label>
+                        {{ form.account_number }}
+                        {{ form.account_number.errors }}
+
+                        <label for="{{ form.bank_name.id_for_label }}" class="form-label mt-2">Bank Name</label>
+                        {{ form.bank_name }}
+                        {{ form.bank_name.errors }}
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit Transaction</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payment JS -->
+<script src="{% static 'js/payments.js' %}"></script>
+
+<!-- Payment Method Toggle Logic -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const paymentMethodField = document.getElementById("id_payment_method");
+        const cryptoTypeField = document.getElementById("crypto_type_field");
+        const cryptoFields = document.getElementById("crypto_fields");
+        const mpesaFields = document.getElementById("mpesa_fields");
+        const cardFields = document.getElementById("cardPaymentFields");
+        const googleAppleFields = document.getElementById("google_apple_fields");
+        const bankTransferFields = document.getElementById("bank_transfer_fields");
+
+        function toggleFields() {
+            const method = paymentMethodField.value;
+
+            cryptoTypeField.classList.toggle("d-none", method !== "Cryptocurrency");
+            cryptoFields.classList.toggle("d-none", method !== "Cryptocurrency");
+
+            mpesaFields.classList.toggle("d-none", method !== "M-Pesa");
+            if (method === "M-Pesa") {
+                document.getElementById("id_mpesa_phone_number").required = true;
+            }
+
+            cardFields.classList.toggle("d-none", method !== "Card");
+            googleAppleFields.classList.toggle("d-none", !["Google Pay", "Apple Pay"].includes(method));
+            bankTransferFields.classList.toggle("d-none", method !== "Bank Transfer");
+        }
+
+        paymentMethodField.addEventListener("change", toggleFields);
+        toggleFields(); // On load
+    });
+</script>
+
+<!-- Async Submit + Error Handling -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("transaction-form");
+        const submitBtn = form.querySelector("button[type='submit']");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+            const payload = {
+                recipient: document.getElementById("id_recipient").value,
+                amount: document.getElementById("id_amount").value,
+                currency: document.getElementById("id_currency").value,
+                country: document.getElementById("id_country").value,
+                payment_method: document.getElementById("id_payment_method").value,
+                transaction_reference: `WT_${Date.now()}`
+            };
+
+            if (payload.payment_method === "M-Pesa") {
+                const mpesaInput = document.getElementById("id_mpesa_phone_number");
+                if (!mpesaInput || !mpesaInput.value.trim()) {
+                    alert("M-Pesa phone number is required.");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Submit Transaction";
+                    return;
+                }
+                payload.mpesa_phone_number = mpesaInput.value.trim();
+            }
+
+            if (payload.payment_method === "Cryptocurrency") {
+                payload.crypto_type = document.getElementById("id_crypto_type").value;
+                payload.crypto_address = document.getElementById("id_crypto_address").value;
+            }
+
+            if (payload.payment_method === "Card") {
+                payload.card_number = document.getElementById("id_card_number").value;
+                payload.expiry_date = document.getElementById("id_expiry_date").value;
+                payload.cvv = document.getElementById("id_cvv").value;
+            }
+
+            if (["Google Pay", "Apple Pay"].includes(payload.payment_method)) {
+                payload.payment_token = document.getElementById("id_payment_token").value;
+            }
+
+            if (payload.payment_method === "Bank Transfer") {
+                payload.account_number = document.getElementById("id_account_number").value;
+                payload.bank_name = document.getElementById("id_bank_name").value;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Processing...";
+
+            try {
+                const response = await fetch("/WorldTtance/api/flutterwave/initiate-payment/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": csrftoken
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("Transaction initiated successfully!");
+                    console.log(result);
+                } else {
+                    if (result.errors) {
+                        const errorMessages = Object.values(result.errors).flat().join('\n');
+                        alert("Form validation failed:\n" + errorMessages);
+                    } else {
+                        alert("Error: " + (result.error || "Something went wrong"));
+                    }
+                }
+
+            } catch (err) {
+                console.error("Network error:", err);
+                alert("Network error. Please try again.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Submit Transaction";
+            }
+        });
+    });
+</script>
+
+{% endblock %}

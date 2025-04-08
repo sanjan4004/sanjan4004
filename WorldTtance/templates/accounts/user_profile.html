@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2>User Profile</h2>
+    {% if profile.profile_picture %}
+    <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" class="img-thumbnail" width="150">
+    {% else %}
+    <img src="{% static 'images/default_profile_picture.jpg' %}" alt="Default Profile Picture">
+    {% endif %}
+    <p><strong>Username:</strong> {{ profile.user.username }}</p>
+    <p><strong>Email:</strong> {{ profile.user.email }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone_number }}</p>
+    <p><strong>Country:</strong> {{ profile.country }}</p>
+    <p><strong>Address:</strong> {{ profile.address }}</p>
+    <p><strong>KYC Verified:</strong> {% if profile.kyc_verified %} ✅ Yes {% else %} ❌ No {% endif %}</p>
+    <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+</div>
+{% endblock %}

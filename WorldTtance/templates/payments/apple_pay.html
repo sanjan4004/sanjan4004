@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Pay with Apple Pay 🍏</h2>
+    <p>Complete your transaction using Apple Pay.</p>
+
+    <button id="apple-pay-button" class="btn btn-dark">Pay with Apple Pay</button>
+
+    <div id="payment-status" class="mt-3"></div>
+</div>
+
+<script>
+    document.getElementById("apple-pay-button").addEventListener("click", async function () {
+        if (window.ApplePaySession) {
+            try {
+                const response = await fetch("{% url 'process_apple_pay' %}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": "{{ csrf_token }}"
+                    },
+                    body: JSON.stringify({
+                        apple_pay_token: "sample_token_from_apple",
+                        amount: 100,  // Example amount
+                        currency: "USD",
+                        recipient_wallet: "0xExampleCryptoWallet"
+                    })
+                });
+
+                const data = await response.json();
+                document.getElementById("payment-status").innerHTML = data.message || data.error;
+            } catch (error) {
+                document.getElementById("payment-status").innerHTML = "Error processing payment.";
+            }
+        } else {
+            alert("Apple Pay is not supported on this device.");
+        }
+    });
+</script>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

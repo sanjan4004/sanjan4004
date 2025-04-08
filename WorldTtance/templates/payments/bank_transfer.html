@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">Pay via Bank Transfer</h2>
+    <p class="text-center">Fill in the details to generate a bank transfer request.</p>
+
+    <form method="post" action="{% url 'bank_transfer' %}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-control" name="country" required>
+                {% for country_code, country_name in countries %}
+                <option value="{{ country_code }}">{{ country_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="currency" class="form-label">Currency</label>
+            <select class="form-control" name="currency" required>
+                {% for currency_code, currency_name in currencies %}
+                <option value="{{ currency_code }}">{{ currency_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" name="amount" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Bank Transfer Details</button>
+    </form>
+</div>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">KYC Verification</h2>
+    <p class="text-center">Please take a clear photo of your ID or Passport.</p>
+
+    <div class="text-center">
+        <video id="video" width="100%" height="auto" autoplay></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="capturedImage" style="display: none; width: 100%;" />
+    </div>
+
+    <div class="text-center mt-3">
+        <button id="captureButton" class="btn btn-primary">Capture</button>
+        <button id="submitButton" class="btn btn-success" style="display: none;">Submit</button>
+    </div>
+
+    <form id="kycForm" method="POST" enctype="multipart/form-data" style="display: none;">
+        {% csrf_token %}
+        <input type="hidden" name="image_data" id="imageData">
+    </form>
+</div>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const capturedImage = document.getElementById('capturedImage');
+    const captureButton = document.getElementById('captureButton');
+    const submitButton = document.getElementById('submitButton');
+    const kycForm = document.getElementById('kycForm');
+    const imageDataInput = document.getElementById('imageData');
+
+    // Access user camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(err => {
+            console.error("Error accessing the camera: ", err);
+            alert("Camera access is required for KYC verification.");
+        });
+
+    // Capture Image
+    captureButton.addEventListener('click', () => {
+        const context = canvas.getContext('2d');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        // Convert to Base64
+        const imageData = canvas.toDataURL('image/png');
+        capturedImage.src = imageData;
+        capturedImage.style.display = 'block';
+        imageDataInput.value = imageData;
+
+        // Hide video and capture button, show submit button
+        video.style.display = 'none';
+        captureButton.style.display = 'none';
+        submitButton.style.display = 'block';
+        kycForm.style.display = 'block';
+    });
+
+    // Submit Image
+    submitButton.addEventListener('click', () => {
+        kycForm.submit();
+    });
+</script>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

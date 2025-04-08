@@ -1,0 +1,152 @@
+/* Global Styles */
+:root {
+    --primary-color: #28a745; /* Green (For Call-To-Actions) */
+    --secondary-color: #17a2b8; /* Teal (For Highlights) */
+    --danger-color: #dc3545; /* Red (For Warnings) */
+    --background-dark: #121212; /* Dark Mode Background */
+    --text-light: #f8f9fa; /* Light Text */
+    --card-bg: #1e1e1e; /* Dark Cards */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* Sidebar Buttons */
+.sidebar .btn {
+    width: 90%;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Top Right Dashboard Button */
+.top-right {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url("../images/money_globe.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cards for UI Elements */
+.card-custom {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Transaction List */
+.transaction-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    background-color: var(--card-bg);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-list li.success {
+    border-left: 5px solid var(--primary-color);
+}
+
+.transaction-list li.failed {
+    border-left: 5px solid var(--danger-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-left: 250px;
+    padding: 10px;
+    background-color: #000;
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+}

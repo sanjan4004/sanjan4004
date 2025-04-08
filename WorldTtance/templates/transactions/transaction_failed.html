@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-danger text-center">Payment Failed ❌</h2>
+    <p class="text-center">There was an issue processing your payment. Please try again.</p>
+    <div class="text-center">
+        <a href="{% url 'new_transaction' %}" class="btn btn-warning">Retry Payment</a>
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Go to Home</a>
+    </div>
+</div>
+
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

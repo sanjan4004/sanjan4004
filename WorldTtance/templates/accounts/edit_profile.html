@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2>Edit Profile</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% crispy form %}
+        <button type="submit" class="btn btn-success">Save Changes</button>
+    </form>
+    <a href="{% url 'profile_view' %}" class="btn btn-secondary">Cancel</a>
+</div>
+
+<!-- Optional: Ensure JS file is needed -->
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}

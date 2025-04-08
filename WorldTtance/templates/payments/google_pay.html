@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Pay with Google Pay</h2>
+    <div id="gpay-button"></div>
+</div>
+
+<script>
+    let googlePayClient;
+    
+    function onGooglePayLoaded() {
+        googlePayClient = new google.payments.api.PaymentsClient({ environment: "TEST" });
+
+        const paymentRequest = {
+            apiVersion: 2,
+            apiVersionMinor: 0,
+            allowedPaymentMethods: [{
+                type: "CARD",
+                parameters: {
+                    allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+                    allowedCardNetworks: ["VISA", "MASTERCARD"],
+                },
+                tokenizationSpecification: {
+                    type: "PAYMENT_GATEWAY",
+                    parameters: {
+                        gateway: "stripe",  // Change to your actual payment gateway
+                        stripe: { publishableKey: "your-stripe-publishable-key", version: "2023-01-01" }
+                    }
+                }
+            }],
+            merchantInfo: {
+                merchantName: "WorldTtance",
+                merchantId: "YOUR_MERCHANT_ID"
+            },
+            transactionInfo: {
+                totalPriceStatus: "FINAL",
+                totalPrice: "10.00",
+                currencyCode: "USD"
+            }
+        };
+
+        const googlePayButton = googlePayClient.createButton({
+            onClick: () => processGooglePay(paymentRequest)
+        });
+
+        document.getElementById("gpay-button").appendChild(googlePayButton);
+    }
+
+    function processGooglePay(paymentRequest) {
+        googlePayClient.loadPaymentData(paymentRequest).then(paymentData => {
+            const token = paymentData.paymentMethodData.tokenizationData.token;
+
+            fetch("{% url 'process_google_pay' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({
+                    amount: "10.00",
+                    currency: "USD",
+                    google_pay_token: token,
+                    recipient_wallet: "your-binance-wallet-address"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert("Payment Successful! Transaction ID: " + data.transaction_id);
+                } else {
+                    alert("Payment Failed: " + data.error);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        })
+        .catch(error => console.error("Google Pay Error:", error));
+    }
+</script>
+
+<script async
+    src="https://pay.google.com/gp/p/js/pay.js"
+    onload="onGooglePayLoaded()">
+</script>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}
+

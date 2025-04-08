@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Pay with M-Pesa</h2>
+    <p class="text-center">Enter your M-Pesa number and confirm the payment.</p>
+
+    <form method="post" action="{% url 'mpesa_payment' %}">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="mpesa_number" class="form-label">M-Pesa Number</label>
+            <input type="text" id="mpesa_number" name="mpesa_number" class="form-control" placeholder="e.g. 254712345678" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter amount" required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Pay Now</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <a href="{% url 'payment_page' %}" class="btn btn-secondary">Back to Payment Options</a>
+    </div>
+</div>
+<script src="{% static 'js/payments.js' %}"></script>
+{% endblock %}
